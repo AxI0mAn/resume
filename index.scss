@@ -1,0 +1,539 @@
+@import './nulling.scss';
+@import './fonts.scss';
+
+$text:black;
+$text-accent: rgb(71, 74, 81);
+$bgc: #8dc8b2d7; //#3eb48959;
+$active: white;
+$yellow: rgb(254, 217, 15);
+$green: rgb(16, 162, 0);
+
+$minWidth: 320;
+$tabWidth: 767.98;
+$maxWidth: 1920;
+$maxWidthContainer: 1440;
+
+@function func_prop_maket($maket_value) {
+  @return calc($maket_value*(100vw/$maxWidth));
+}
+
+@function func_prop_mob($maket_value) {
+  @return calc($maket_value*(100vw/$tabWidth));
+}
+
+@function func_respons($maxSizeValue, $minSizeValue) {
+  $deltaSize: $maxSizeValue - $minSizeValue;
+  @return calc(#{$minSizeValue + px} + #{$deltaSize} * ((100vw - #{$minWidth + px}) / (#{$maxWidth} - #{$minWidth})));
+}
+
+body {
+  $colorF: $active;
+  $colorS: $bgc;
+  color: $text;
+  background: $active;
+  background: -moz-linear-gradient(top, $colorF 0%, $colorS 50%, $colorF 100%);
+  background: -webkit-linear-gradient(top, $colorF 0%, $colorS 50%, $colorF 100%);
+  background: linear-gradient(to bottom, $colorF 0%, $colorS 50%, $colorF 100%);
+}
+
+h1 {
+  font-size: xx-large;
+  font-family: 'UbuntuBold';
+}
+
+h2,
+h3,
+h4 {
+  font-family: 'OmegleRegular';
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: x-large;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+h3 {
+  font-size: large;
+}
+
+h4 {
+  font-size: medium;
+}
+
+p,
+li {
+  font-size: medium;
+  font-family: 'UbuntuMedium';
+  line-height: func_respons(34, 20);
+  letter-spacing: func_prop_maket(4);
+}
+
+a {
+  color: $text;
+  font-family: 'UbuntuBold';
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $yellow;
+    color: $text-accent;
+  }
+
+  &:active {
+    color: $active;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+  }
+}
+
+details {
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+
+}
+
+
+.wrapper {
+  max-width: calc($maxWidth * 1px);
+  min-width: calc($minWidth * 1px);
+  min-height: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin: 0 auto;
+  // margin-top: 30px; // delete before print
+}
+
+.container {
+  max-width: calc($maxWidthContainer*1px);
+  width: 96%;
+  margin: 10px auto; //for print 10px auto / other func_prop_maket(40) auto
+}
+
+header {
+  .heder__content {
+    display: grid;
+    grid-template-columns: 3fr 1fr 50px;
+
+    .person {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        "fio fio"
+        "age loc"
+        "role role";
+      align-items: center;
+      justify-items: center;
+      justify-self: center;
+      padding-right: func_prop_maket(20);
+
+
+      .person__fio {
+        grid-area: fio;
+      }
+
+      .person__age {
+        grid-area: age;
+        justify-self: center;
+      }
+
+      .person__location {
+        grid-area: loc;
+      }
+
+      .person__role {
+        grid-area: role;
+        text-transform: uppercase;
+      }
+    }
+
+    .contacts {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      justify-self: center;
+      padding-left: func_prop_maket(77);
+      padding-right: func_prop_maket(77);
+      border-left: $green 2px groove;
+      border-right: $green 2px groove;
+    }
+
+    .select_all {
+      align-self: center;
+      width: 50px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-content: center;
+    }
+
+    /*
+    // only print
+    .select_multi_Ling:nth-child(2) {
+      width: 100%;
+      background-color: $bgc;
+    }
+*/
+    .select_multi_Ling {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .select_multi_Ling input:checked+.radio_mark {
+      background-color: $bgc;
+    }
+
+    .radio_mark {
+      cursor: pointer;
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+.print_version {
+  // ONLY FOR PRINT
+  text-align: center;
+
+  a {
+    background-color: $active;
+    color: $text-accent;
+    font-size: 12px;
+    font-family: 'OrbitronBold';
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+main {
+  max-width: calc($maxWidthContainer*1px);
+  width: 96%;
+  margin: 0 auto;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, minmax(fit-content, 1fr));
+  grid-template-areas:
+    "hero hero"
+    "hardsk portf"
+    "profex profex"
+    "softsk footer"
+  ;
+}
+
+.hero {
+  grid-area: hero;
+  height: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 10px $green groove;
+  border-bottom: 10px $green groove;
+
+  .income {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.hardskills {
+  grid-area: hardsk;
+  padding-left: func_prop_maket(30);
+
+  .hardskills__showcase__case>summary {
+    font-size: 18px;
+    font-family: 'UbuntuBold';
+    letter-spacing: 0.125rem;
+
+    span {
+      margin-left: 1rem;
+      font-size: 14px;
+      font-family: 'OrbitronBold';
+      font-family: 'UbuntuBold';
+    }
+
+
+    &::-webkit-details-marker,
+    &::marker {
+      display: none;
+      content: '\2705';
+    }
+  }
+
+  .hardskills__showcase__case>p {
+    background-color: $active;
+    // box-shadow: -5px -5px 10px 10px $bgc, 5px 5px 10px 10px $bgc;
+    padding-left: 20px;
+    border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    -moz-border-radius: 7.5px;
+    -ms-border-radius: 7.5px;
+    -o-border-radius: 7.5px;
+  }
+
+  .hardskills__showcase__case[open]>summary::marker {
+    display: none;
+    content: "\274E";
+  }
+}
+
+.portfolio {
+  grid-area: portf;
+
+  .portfolio__showcase {
+
+    display: grid;
+    grid-template-rows: repeat(6, minmax(fit-content, 1fr)); // for print 150px  / other 250px
+    // row-gap: func_respons(20, 10);
+
+    .portfolio__showcase__item {
+      width: 96%;
+      border-radius: 15px;
+      background: $bgc;
+      // box-shadow: inset 15px 15px 30px rgb(0, 162, 255, .25),        inset -15px -15px 30px $green;
+      text-align: center;
+      margin: func_prop_maket(10);
+      padding: 5px; //  for print 0px other10px;
+      justify-self: center;
+      align-self: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, minmax(fit-content, 1fr));
+      grid-template-areas:
+        "nam nam"
+        "goto code"
+        "more more";
+      row-gap: 8px;
+
+      .item-nam {
+        grid-area: nam;
+        text-transform: uppercase;
+        // text-shadow: 1px -1px 1px $active;
+      }
+
+      %portfolio-item {
+        justify-self: center;
+        // text-shadow: -1px 1px 1px $active;
+        // box-shadow: 1px 1px 1px 1px $active;
+        background-color: rgb(255, 255, 255, .5);
+
+        &:hover {
+          background-color: $active;
+        }
+      }
+
+      .item-goto {
+        grid-area: goto;
+        width: 90%;
+        border-top-left-radius: 15px;
+        @extend %portfolio-item;
+      }
+
+      .item-code {
+        grid-area: code;
+        width: 90%;
+        border-top-right-radius: 15px;
+
+        img {
+          height: 15px;
+          vertical-align: middle
+        }
+
+        @extend %portfolio-item;
+      }
+
+      .item-more {
+        grid-area: more;
+        width: 96%;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        @extend %portfolio-item;
+      }
+
+      .portfolio__showcase__item__details>summary {
+
+        &::-webkit-details-marker,
+        &::marker {
+          display: none;
+          content: '\1F530';
+        }
+      }
+
+      .portfolio__showcase__item__details[open]>summary::marker {
+        display: none;
+        content: "\1F53A";
+      }
+
+      .portfolio__showcase__item__details {
+        .portfolio__case {
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
+
+          a {
+            font-size: 18px;
+            color: $yellow;
+          }
+
+          .stack {
+            :last-child {
+              li {
+                display: inline-block;
+                padding: 5px;
+                margin: 5px;
+                width: fit-content;
+                border-radius: 15px;
+                background: $bgc;
+                // box-shadow: 2.5px 2.5px 5px $green,                   -2.5px -2.5px 5px $green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .portfolio__showcase__item>a:first-of-type {
+    ::after {
+      content: "\1F441";
+      padding-left: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  .portfolio__showcase__item>a:last-of-type {
+    ::before {
+      content: "\1F441";
+      padding-right: 10px;
+      vertical-align: middle;
+    }
+  }
+
+
+}
+
+.prof-experience {
+  grid-area: profex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 10px $green groove;
+
+  .prof-experience__role {
+    margin: 10px auto;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+}
+
+.softskills {
+  grid-area: softsk;
+  align-self: start;
+  justify-content: start;
+  padding: 30px;
+  border-top: 10px $green groove;
+
+  h2 {
+    text-align: left;
+    padding-left: 50px;
+  }
+
+  .softskills__showcase__case {
+    font-size: 16px;
+    font-family: 'UbuntuMedium';
+    padding-left: 50px;
+  }
+
+  .softskills__showcase__case>p,
+  .softskills__showcase__case>ol {
+    text-align: left;
+    background-color: rgba(144, 255, 110, 0.25);
+    padding-left: 20px;
+  }
+}
+
+footer {
+  grid-area: footer;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  border-top: 10px $green groove;
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (max-width: 904.98px) {
+  main {
+    grid-template-rows: repeat(5, minmax(fit-content, 1fr));
+    grid-template-areas:
+      "hero hero"
+      "hardsk hardsk"
+      "portf portf"
+      "profex profex"
+      "softsk footer"
+    ;
+  }
+
+  .softskills {
+    grid-area: softsk;
+    align-self: start;
+  }
+}
+
+@media screen and (max-width: 673.98px) {
+
+  .person__role,
+  .person__fio {
+    width: 70%;
+    text-align: right;
+  }
+
+  .person__role {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 623.98px) {
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .heder__content {
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: space-evenly;
+
+      .person {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+    }
+  }
+
+  .softskills {
+    width: 96%;
+  }
+}

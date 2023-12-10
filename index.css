@@ -1,0 +1,553 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Bungee";
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("./fonts/Bungee.woff2") format("woff2"), url("./fonts/Bungee.ttf") format("ttf");
+}
+@font-face {
+  font-family: "ConcertOne";
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("./fonts/ConcertOne.woff2") format("woff2"), url("./fonts/ConcertOne.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OmegleRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("./fonts/OmegleRegular.otf") format("otf"), url("./fonts/OmegleRegular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OrbitronBold";
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("./fonts/OrbitronBold.woff2") format("woff2"), url("./fonts/OrbitronBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "UbuntuRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("./fonts/UbuntuRegular.woff2") format("woff2"), url("./fonts/UbuntuRegular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "UbuntuMedium";
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("./fonts/UbuntuMedium.woff2") format("woff2"), url("./fonts/UbuntuMedium.ttf") format("ttf");
+}
+@font-face {
+  font-family: "UbuntuBold";
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("./fonts/UbuntuBold.woff2") format("woff2"), url("./fonts/UbuntuBold.ttf") format("ttf");
+}
+body {
+  color: black;
+  background: white;
+  background: linear-gradient(to bottom, white 0%, rgba(141, 200, 178, 0.8431372549) 50%, white 100%);
+}
+
+h1 {
+  font-size: xx-large;
+  font-family: "UbuntuBold";
+}
+
+h2,
+h3,
+h4 {
+  font-family: "OmegleRegular";
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: x-large;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+h3 {
+  font-size: large;
+}
+
+h4 {
+  font-size: medium;
+}
+
+p,
+li {
+  font-size: medium;
+  font-family: "UbuntuMedium";
+  line-height: calc(20px + 14 * ((100vw - 320px) / (1920 - 320)));
+  letter-spacing: 0.2083333333vw;
+}
+
+a {
+  color: black;
+  font-family: "UbuntuBold";
+}
+a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgb(254, 217, 15);
+          text-decoration-color: rgb(254, 217, 15);
+  color: rgb(71, 74, 81);
+}
+a:active {
+  color: white;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+details {
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+}
+
+.wrapper {
+  max-width: 1920px;
+  min-width: 320px;
+  min-height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1440px;
+  width: 96%;
+  margin: 10px auto;
+}
+
+header .heder__content {
+  display: grid;
+  grid-template-columns: 3fr 1fr 50px;
+  /*
+      // only print
+      .select_multi_Ling:nth-child(2) {
+        width: 100%;
+        background-color: $bgc;
+      }
+  */
+}
+header .heder__content .person {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "fio fio" "age loc" "role role";
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  padding-right: 1.0416666667vw;
+}
+header .heder__content .person .person__fio {
+  grid-area: fio;
+}
+header .heder__content .person .person__age {
+  grid-area: age;
+  justify-self: center;
+}
+header .heder__content .person .person__location {
+  grid-area: loc;
+}
+header .heder__content .person .person__role {
+  grid-area: role;
+  text-transform: uppercase;
+}
+header .heder__content .contacts {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  justify-self: center;
+  padding-left: 4.0104166667vw;
+  padding-right: 4.0104166667vw;
+  border-left: rgb(16, 162, 0) 2px groove;
+  border-right: rgb(16, 162, 0) 2px groove;
+}
+header .heder__content .select_all {
+  align-self: center;
+  width: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+}
+header .heder__content .select_multi_Ling {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .heder__content .select_multi_Ling input:checked + .radio_mark {
+  background-color: rgba(141, 200, 178, 0.8431372549);
+}
+header .heder__content .radio_mark {
+  cursor: pointer;
+}
+header .heder__content input {
+  display: none;
+}
+
+.print_version {
+  text-align: center;
+}
+.print_version a {
+  background-color: white;
+  color: rgb(71, 74, 81);
+  font-size: 12px;
+  font-family: "OrbitronBold";
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+main {
+  max-width: 1440px;
+  width: 96%;
+  margin: 0 auto;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, minmax(-webkit-fit-content, 1fr));
+  grid-template-rows: repeat(4, minmax(fit-content, 1fr));
+  grid-template-areas: "hero hero" "hardsk portf" "profex profex" "softsk footer";
+}
+
+.hero {
+  grid-area: hero;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 10px rgb(16, 162, 0) groove;
+  border-bottom: 10px rgb(16, 162, 0) groove;
+}
+.hero .income p {
+  font-size: 14px;
+}
+
+.hardskills {
+  grid-area: hardsk;
+  padding-left: 1.5625vw;
+}
+.hardskills .hardskills__showcase__case > summary {
+  font-size: 18px;
+  font-family: "UbuntuBold";
+  letter-spacing: 0.125rem;
+}
+.hardskills .hardskills__showcase__case > summary span {
+  margin-left: 1rem;
+  font-size: 14px;
+  font-family: "OrbitronBold";
+  font-family: "UbuntuBold";
+}
+.hardskills .hardskills__showcase__case > summary::-webkit-details-marker, .hardskills .hardskills__showcase__case > summary::marker {
+  display: none;
+  content: "✅";
+}
+.hardskills .hardskills__showcase__case > p {
+  background-color: white;
+  padding-left: 20px;
+  border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  -moz-border-radius: 7.5px;
+  -ms-border-radius: 7.5px;
+  -o-border-radius: 7.5px;
+}
+.hardskills .hardskills__showcase__case[open] > summary::marker {
+  display: none;
+  content: "❎";
+}
+
+.portfolio {
+  grid-area: portf;
+}
+.portfolio .portfolio__showcase {
+  display: grid;
+  grid-template-rows: repeat(6, minmax(-webkit-fit-content, 1fr));
+  grid-template-rows: repeat(6, minmax(fit-content, 1fr));
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item {
+  width: 96%;
+  border-radius: 15px;
+  background: rgba(141, 200, 178, 0.8431372549);
+  text-align: center;
+  margin: 0.5208333333vw;
+  padding: 5px;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, minmax(-webkit-fit-content, 1fr));
+  grid-template-rows: repeat(3, minmax(fit-content, 1fr));
+  grid-template-areas: "nam nam" "goto code" "more more";
+  row-gap: 8px;
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .item-nam {
+  grid-area: nam;
+  text-transform: uppercase;
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .item-more, .portfolio .portfolio__showcase .portfolio__showcase__item .item-code, .portfolio .portfolio__showcase .portfolio__showcase__item .item-goto {
+  justify-self: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .item-more:hover, .portfolio .portfolio__showcase .portfolio__showcase__item .item-code:hover, .portfolio .portfolio__showcase .portfolio__showcase__item .item-goto:hover {
+  background-color: white;
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .item-goto {
+  grid-area: goto;
+  width: 90%;
+  border-top-left-radius: 15px;
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .item-code {
+  grid-area: code;
+  width: 90%;
+  border-top-right-radius: 15px;
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .item-code img {
+  height: 15px;
+  vertical-align: middle;
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .item-more {
+  grid-area: more;
+  width: 96%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .portfolio__showcase__item__details > summary::-webkit-details-marker, .portfolio .portfolio__showcase .portfolio__showcase__item .portfolio__showcase__item__details > summary::marker {
+  display: none;
+  content: "🔰";
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .portfolio__showcase__item__details[open] > summary::marker {
+  display: none;
+  content: "🔺";
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .portfolio__showcase__item__details .portfolio__case {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .portfolio__showcase__item__details .portfolio__case a {
+  font-size: 18px;
+  color: rgb(254, 217, 15);
+}
+.portfolio .portfolio__showcase .portfolio__showcase__item .portfolio__showcase__item__details .portfolio__case .stack :last-child li {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 15px;
+  background: rgba(141, 200, 178, 0.8431372549);
+}
+.portfolio .portfolio__showcase__item > a:first-of-type ::after {
+  content: "👁";
+  padding-left: 10px;
+  vertical-align: middle;
+}
+.portfolio .portfolio__showcase__item > a:last-of-type ::before {
+  content: "👁";
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.prof-experience {
+  grid-area: profex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 10px rgb(16, 162, 0) groove;
+}
+.prof-experience .prof-experience__role {
+  margin: 10px auto;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.softskills {
+  grid-area: softsk;
+  align-self: start;
+  justify-content: start;
+  padding: 30px;
+  border-top: 10px rgb(16, 162, 0) groove;
+}
+.softskills h2 {
+  text-align: left;
+  padding-left: 50px;
+}
+.softskills .softskills__showcase__case {
+  font-size: 16px;
+  font-family: "UbuntuMedium";
+  padding-left: 50px;
+}
+.softskills .softskills__showcase__case > p,
+.softskills .softskills__showcase__case > ol {
+  text-align: left;
+  background-color: rgba(144, 255, 110, 0.25);
+  padding-left: 20px;
+}
+
+footer {
+  grid-area: footer;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  border-top: 10px rgb(16, 162, 0) groove;
+}
+
+@media screen and (max-width: 904.98px) {
+  main {
+    grid-template-rows: repeat(5, minmax(-webkit-fit-content, 1fr));
+    grid-template-rows: repeat(5, minmax(fit-content, 1fr));
+    grid-template-areas: "hero hero" "hardsk hardsk" "portf portf" "profex profex" "softsk footer";
+  }
+  .softskills {
+    grid-area: softsk;
+    align-self: start;
+  }
+}
+@media screen and (max-width: 673.98px) {
+  .person__role,
+.person__fio {
+    width: 70%;
+    text-align: right;
+  }
+  .person__role {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 623.98px) {
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  header .heder__content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: space-evenly;
+  }
+  header .heder__content .person {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .softskills {
+    width: 96%;
+  }
+}
