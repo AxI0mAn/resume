@@ -296,12 +296,13 @@ header .heder__content input {
 
 .print_version {
   text-align: center;
+  background-color: white;
 }
 .print_version a {
-  background-color: white;
   color: rgb(71, 74, 81);
   font-size: 12px;
   font-family: "OrbitronBold";
+  line-height: 24px;
   padding: 10px;
   border-radius: 10px;
   -webkit-border-radius: 10px;

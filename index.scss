@@ -206,12 +206,13 @@ header {
 .print_version {
   // ONLY FOR PRINT
   text-align: center;
+  background-color: $active;
 
   a {
-    background-color: $active;
     color: $text-accent;
     font-size: 12px;
     font-family: 'OrbitronBold';
+    line-height: 24px;
     padding: 10px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
