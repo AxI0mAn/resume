@@ -217,12 +217,13 @@ details summary::marker {
   display: flex;
   flex-flow: column nowrap;
   margin: 0 auto;
+  margin-top: 30px;
 }
 
 .container {
   max-width: 1440px;
   width: 96%;
-  margin: 10px auto;
+  margin: 2.0833333333vw auto;
 }
 
 header .heder__content {
@@ -295,20 +296,23 @@ header .heder__content input {
 }
 
 .print_version {
+  /*  // ONLY FOR PRINT
   text-align: center;
-  background-color: white;
-}
-.print_version a {
-  color: rgb(71, 74, 81);
-  font-size: 12px;
-  font-family: "OrbitronBold";
-  line-height: 24px;
-  padding: 10px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  background-color: $active;
+
+  a {
+    color: $text-accent;
+    font-size: 12px;
+    font-family: 'OrbitronBold';
+    line-height: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  */
 }
 
 main {
@@ -345,6 +349,7 @@ main {
   font-size: 18px;
   font-family: "UbuntuBold";
   letter-spacing: 0.125rem;
+  margin-top: 1.5625vw;
 }
 .hardskills .hardskills__showcase__case > summary span {
   margin-left: 1rem;
@@ -372,19 +377,23 @@ main {
 
 .portfolio {
   grid-area: portf;
+  max-width: 500px;
 }
 .portfolio .portfolio__showcase {
   display: grid;
   grid-template-rows: repeat(6, minmax(-webkit-fit-content, 1fr));
   grid-template-rows: repeat(6, minmax(fit-content, 1fr));
+  row-gap: calc(10px + 10 * ((100vw - 320px) / (1920 - 320)));
 }
 .portfolio .portfolio__showcase .portfolio__showcase__item {
   width: 96%;
   border-radius: 15px;
   background: rgba(141, 200, 178, 0.8431372549);
+  box-shadow: inset 15px 15px 30px rgba(0, 162, 255, 0.25), inset -15px -15px 30px rgb(16, 162, 0);
   text-align: center;
   margin: 0.5208333333vw;
-  padding: 5px;
+  padding: 10px;
+  margin-top: 1.5625vw;
   justify-self: center;
   align-self: center;
   display: grid;
@@ -547,6 +556,12 @@ footer {
   header .heder__content .person {
     display: flex;
     flex-flow: column nowrap;
+  }
+  header .heder__content .select_all {
+    align-self: end;
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
   .softskills {
     width: 96%;
