@@ -108,13 +108,13 @@ details summary::marker {
   flex-flow: column nowrap;
 
   margin: 0 auto;
-  margin-top: 30px; // OFF before print
+  //margin-top: 30px; // OFF before print
 }
 
 .container {
   max-width: calc($maxWidthContainer*1px);
   width: 96%;
-  margin: func_prop_maket(40) auto; //for print 10px auto / other func_prop_maket(40) auto
+  margin: 5px auto; //for print 5px auto / other func_prop_maket(40) auto
 }
 
 header {
@@ -176,13 +176,13 @@ header {
       align-content: center;
     }
 
-    /*
+    /* */
     // only print
     .select_multi_Ling:nth-child(2) {
       width: 100%;
       background-color: $bgc;
     }
-*/
+
     .select_multi_Ling {
       width: 100%;
       display: flex;
@@ -206,6 +206,7 @@ header {
 .print_version {
 
   /*  // ONLY FOR PRINT
+  */
   text-align: center;
   background-color: $active;
 
@@ -221,7 +222,6 @@ header {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
   }
-  */
 }
 
 main {
@@ -263,7 +263,8 @@ main {
     font-size: 18px;
     font-family: 'UbuntuBold';
     letter-spacing: 0.125rem;
-    margin-top: func_prop_maket(30);
+    margin-top: func_prop_maket(5); //  for print func_prop_maket(5) other func_prop_maket(30)
+
 
     span {
       margin-left: 1rem;
@@ -305,18 +306,18 @@ main {
 
     display: grid;
     grid-template-rows: repeat(6, minmax(fit-content, 1fr));
-    row-gap: func_respons(20, 10); //  OFF for print
+    //row-gap: func_respons(20, 10); //  OFF for print
 
     .portfolio__showcase__item {
       width: 96%;
       border-radius: 15px;
       background: $bgc;
-      box-shadow: inset 15px 15px 30px rgb(0, 162, 255, .25), inset -15px -15px 30px $green; //  OFF for print
+      // box-shadow: inset 15px 15px 30px rgb(0, 162, 255, .25), inset -15px -15px 30px $green; //  OFF for print
       text-align: center;
-      margin: func_prop_maket(10);
-      padding: 10px; //  for print 5px other10px;
+      // margin: func_prop_maket(10);//  OFF for print
+      padding: 2.5px; //  for print 2.5px other10px;
 
-      margin-top: func_prop_maket(30);
+      margin-top: func_prop_maket(10); //  for print func_prop_maket(10) other func_prop_maket(30)
       justify-self: center;
       align-self: center;
       display: grid;
