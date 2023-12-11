@@ -126,7 +126,7 @@ const translateArr = {
   },
   "jan23": {
     "en": "january 23 -> present:",
-    "ua": "cшчень 23 -> сьогодення",
+    "ua": "cічень 23 -> сьогодення",
     "ru": "январь 23 -> настоящее",
   },
   "jan23-rol": {
@@ -165,14 +165,14 @@ const translateArr = {
     "ru": "март 21 -> февраль 22:",
   },
   "mar21_feb22-rol": {
-    "en": "The chief engineer.",
-    "ua": "Головний інженер.",
-    "ru": "Главный инженер.",
+    "en": "Engineer.",
+    "ua": "Інженер.",
+    "ru": "Инженер.",
   },
   "job_desc-mar21_feb22": {
-    "en": "Large chain of restaurants and kitchens. Solution of all technical tasks of enterprise. Management of department and staff.",
-    "ua": "Велика мережа ресторанів та кухонь. Розв'язання будь яких технічних завдань підприємства. Управління відділом та штатом.",
-    "ru": "Большая сеть ресторанов и кухонь. Решение всех технических задач предприятия. Управление отделом и штатом.",
+    "en": "Large chain of restaurants and kitchens. Solution of all technical tasks of enterprise.",
+    "ua": "Велика мережа ресторанів та кухонь. Розв'язання будь яких технічних завдань підприємства.",
+    "ru": "Большая сеть ресторанов и кухонь. Решение всех технических задач предприятия.",
   },
   "feb16-mar20": {
     "en": "february 16 -> march 20:",
@@ -195,9 +195,9 @@ const translateArr = {
     "ru": "2006 -> 2016:",
   },
   "06_16-rol": {
-    "en": "Sole Proprietor.",
-    "ua": "Підприємець",
-    "ru": "Предприниматель",
+    "en": "Engineer.",
+    "ua": "Інженер.",
+    "ru": "Инженер.",
   },
   "job_desc-06_16": {
     "en": "Automation of technological processes in trade, food and processing industries.",
@@ -211,28 +211,18 @@ const translateArr = {
   },
   "TimeMan": {
     "en": "TimeManagement",
-    "ua": "Управління часом",
-    "ru": "Управление временем",
-  },
-  "TimeMan-1": {
-    "en": "Time is not a renewable resource. It is important to use it correctly. There are only 24 hours in a day, but that's 1440 minutes. This is enough for all sectors of life, if you apply simple rules:",
-    "ua": "Час то не відновлюваний ресурс. Важливо правильно ним користуватися. У добі лише 24 години, але це 1440 хвилин. Цього вистачить на всі сфери життя, якщо дотримуватися простих правил:",
-    "ru": "Время не является возобновляемым ресурсом. Важно правильно им пользоваться. В сутках всего 24 часа, но это 1440 минут. Этого хватит на все сферы жизни, если соблюдать простые правила:",
+    "ua": "Вміння розподіляти час.",
+    "ru": "Умение распределять время.",
   },
   "TimeMan-2": {
-    "en": "Planning and a list of tasks.",
-    "ua": "Планування та список завдань.",
-    "ru": "Планирование и список задач.",
-  },
-  "TimeMan-3": {
-    "en": "Consider the importance and priority of tasks.",
-    "ua": "Враховуйте важливість і пріоритетність завдань.",
-    "ru": "Учитывайте важность и приоритетность задач.",
+    "en": "Planning and listing tasks, taking into account the importance and priority of tasks.",
+    "ua": "Планування та список завдань, враховуючи важливість і пріоритетність завдань.",
+    "ru": "Планирование и список задач, учитывая важность и приоритетность задач.",
   },
   "TimeMan-4": {
-    "en": "Use the Pareto 80/20 principle.",
-    "ua": "Використовуйте принцип Парето 80/20.",
-    "ru": "Используйте принцип Парето 80/20.",
+    "en": "And use the Pareto 80/20 principle.",
+    "ua": "А щє використовую принцип Парето 80/20.",
+    "ru": "А также, используя принцип Парето 80/20.",
   },
   "MultiKi": {
     "en": "MultitasKING",
@@ -246,63 +236,18 @@ const translateArr = {
   },
   "MultiKi-2": {
     "en": "Depending on the priority of tasks - one main, and the second background.",
-    "ua": "В зависимости от приоритета задач — одна основная, вторая фоновая.",
-    "ru": "Залежно від пріоритету завдань - одне основне, а інше фонове.",
+    "ua": "Залежно від пріоритету завдань - одне основне, а інше фонове.",
+    "ru": "В зависимости от приоритета задач — одна основная, вторая фоновая.",
   },
   "MultiKi-3": {
     "en": "If there are several important tasks, then regular switching between tasks.",
     "ua": "Якщо важливих завдань кілька, то регулярне перемикання між завданнями.",
     "ru": "Если важных задач несколько, то регулярное переключение между задачами.",
   },
-  "MultiKi-4": {
-    "en": "Delegate - or you will die from overload.",
-    "ua": "Делегуй - або помреш від перевантаження.",
-    "ru": "Делегируй - или умрёшь от перегрузки.",
-  },
   "StreTo": {
     "en": "StressTolerance",
     "ua": "Стресостійкість",
     "ru": "Стрессоустойчивость",
-  },
-  "StreTo-1": {
-    "en": "This is an acquired life experience. The science of conflictology explains the rules of behavior that help to detect the beginning conflict and prevent an uncontrolled emotional outburst.",
-    "ua": "Це набутий життєвий досвід. Наука конфліктологія пояснює правила поведінки, які допомагають виявити коли починається конфлікт і запобігти неконтрольованому емоційному сплеску.",
-    "ru": "Это приобретенный жизненный опыт. Наука конфликтология объясняет правила поведения, которые помогают обнаружить начинающийся конфликт и предотвратить неконтролируемый эмоциональный всплеск.",
-  },
-  "NoCo": {
-    "en": "NoConflict",
-    "ua": "Не конфліктність",
-    "ru": "Не конфликтный",
-  },
-  "NoCo-1": {
-    "en": "This is experience gained over many years of work 24/7. If treats problems as tasks, then it remains just to calmly solve the problem.",
-    "ua": "Це досвід, накопичений за багато років роботи 24/7. Якщо ставитися до проблем як до завдань, то залишається просто спокійно вирішити проблему.",
-    "ru": "Это опыт, накопленный за многие годы работы 24/7. Если относится к проблемам как к задачам, то остается просто спокойно решить проблему.",
-  },
-  "CreatТе": {
-    "en": "Creation of a team",
-    "ua": "Створення команди",
-    "ru": "Создание команды",
-  },
-  "CreatТе-1": {
-    "en": "I'm regularly assigned to recruit a team of specialists to perform various tasks. I consider professional and personal qualities personas. Goal - to complete the task in time and to work together in pleasure.",
-    "ua": "Мені регулярно доручають підбір команди спеціалістів під різні завдання. Я ціную професійні та особисті якості людини. Мета – виконувати завдання вчасно та працювати разом із задоволенням.",
-    "ru": "Мне регулярно поручают подбор команды специалистов под различные задачи. Я ценю профессиональные и личные качества человека. Цель — выполнять задания вовремя и работать вместе с удовольствием.",
-  },
-  "TeamMa": {
-    "en": "TeamManagement",
-    "ua": "Управління командою",
-    "ru": "Управление командой",
-  },
-  "TeamMa-1": {
-    "en": "To manage is not to prevent good people from working. But it is important to see the &#8217;&#8217;weak link&#8217;&#8217; in the chain of employees in time ... and replace or &#8217;&#8217;repair&#8217;&#8217; it.",
-    "ua": "Керувати – це не заважати хорошим людям працювати. Але важливо вчасно побачити «слабку ланку» в ланцюжку співробітників ... і замінити або «відремонтувати» її.",
-    "ru": "Управлять – значит не мешать хорошим людям работать. Но важно вовремя увидеть «слабое звено» в цепочке сотрудников… и заменить или «отремонтировать» его. ",
-  },
-  "TeamMa-2": {
-    "en": "The result is the only measure for both employee evaluation and teamwork.",
-    "ua": "Результат є єдиним критерієм як оцінки співробітників, так і командної роботи.",
-    "ru": "Результат является единственным мерилом как для оценки сотрудников, так и для командной работы.",
   },
   "AnAn": {
     "en": "Analysis and Analytics",
@@ -320,9 +265,9 @@ const translateArr = {
     "ru": "Креативность и видение",
   },
   "CreVi-1": {
-    "en": "I often get ideas. They do not always lead to a patent, but they are written in a notebook. I can explain and depict what I see in my imagination. This helps to find non-standard solutions to complex problems.",
-    "ua": "Мені часто приходять ідеї. Вони не завжди ведуть до патенту, але записуються в зошит. Я можу пояснити і зобразити те, що бачу в своїй уяві. Це допомагає знаходити нестандартні рішення складних завдань.",
-    "ru": "Ко мне часто приходят идеи. Они не всегда ведут к патенту, но записываются в блокнот. Я могу объяснить и изобразить то, что вижу в своем воображении. Это помогает находить нестандартные решения сложных проблем.",
+    "en": "I can explain and depict what I see in my imagination. This helps to find non-standard solutions to complex problems.",
+    "ua": "Я можу пояснити і зобразити те, що бачу в своїй уяві. Це допомагає знаходити нестандартні рішення складних завдань.",
+    "ru": "Я могу объяснить и изобразить то, что вижу в своем воображении. Это помогает находить нестандартные решения сложных проблем.",
   },
   "Foo-1": {
     "en": "Thank you for your time. I tried to make my rеsumе as concise, objective and unbiased as possible.",
@@ -335,19 +280,14 @@ const translateArr = {
     "ru": "Я надеюсь, что моих сегодняшних навыков достаточно для открытой позиции, чтобы я мог стать частью вашей команды.",
   },
   "Foo-3": {
-    "en": "If, in your opinion, I lack knowledge or experience - it is not a problem. I learn quickly.",
-    "ua": "Якщо, на вашу думку, мені не вистачає знань чи досвіду - це не проблема. Я швидко вчуся.",
-    "ru": "Если, по вашему мнению, мне не хватает знаний или опыта – это не проблема. Я быстро учусь.",
+    "en": "I look forward to your answer. And ready to answer additional questions or show my skills while doing the test.",
+    "ua": "Чекаю на вашу відповідь. І готовий відповісти на додаткові запитання чи показати свої навички під час виконання тесту.",
+    "ru": " Я с нетерпением жду вашего ответа. И готов ответить на дополнительные вопросы или показать свои навыки во время прохождения теста.",
   },
   "Foo-4": {
     "en": "Respectfully, Dmitry Mikhailovich",
     "ua": "З повагою, Дмитро Михайлович",
     "ru": "С уважением, Дмитрий Михайлович",
-  },
-  "Foo-5": {
-    "en": "P.S. I look forward to your answer. And ready to answer additional questions or show my skills while doing the test.",
-    "ua": "P.S. Чекаю на вашу відповідь. І готовий відповісти на додаткові запитання чи показати свої навички під час виконання тесту.",
-    "ru": "P.S. Я с нетерпением жду вашего ответа. И готов ответить на дополнительные вопросы или показать свои навыки во время прохождения теста.",
   },
   "hs-head": {
     "en": "in my work apply and use:",
