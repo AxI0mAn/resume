@@ -71,7 +71,8 @@ li {
   letter-spacing: func_prop_maket(4);
 }
 
-a {
+a,
+.radio_mark {
   color: $text;
   font-family: 'UbuntuBold';
 
@@ -176,13 +177,13 @@ header {
       align-content: center;
     }
 
-    /* */
+    /*
     // only print
     .select_multi_Ling:nth-child(2) {
       width: 100%;
       background-color: $bgc;
     }
-
+ */
     .select_multi_Ling {
       width: 100%;
       display: flex;
@@ -206,7 +207,7 @@ header {
 .print_version {
 
   /*  // ONLY FOR PRINT
-  */
+ 
   text-align: center;
   background-color: $active;
 
@@ -222,6 +223,7 @@ header {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
   }
+   */
 }
 
 main {

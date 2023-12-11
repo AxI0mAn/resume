@@ -13,7 +13,6 @@ for (let btn of radio_btns) {
   })
 }
 
-
 function changeURLLang() {
   let lang = select.value;
   location.href = window.location.pathname + '#' + lang;

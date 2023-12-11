@@ -228,7 +228,13 @@ details summary::marker {
 header .heder__content {
   display: grid;
   grid-template-columns: 3fr 1fr 50px;
-  /* */
+  /*
+     // only print
+     .select_multi_Ling:nth-child(2) {
+       width: 100%;
+       background-color: $bgc;
+     }
+  */
 }
 header .heder__content .person {
   display: grid;
@@ -273,10 +279,6 @@ header .heder__content .select_all {
   justify-content: center;
   align-content: center;
 }
-header .heder__content .select_multi_Ling:nth-child(2) {
-  width: 100%;
-  background-color: rgba(141, 200, 178, 0.8431372549);
-}
 header .heder__content .select_multi_Ling {
   width: 100%;
   display: flex;
@@ -294,21 +296,23 @@ header .heder__content input {
 
 .print_version {
   /*  // ONLY FOR PRINT
-  */
+
   text-align: center;
-  background-color: white;
-}
-.print_version a {
-  color: rgb(71, 74, 81);
-  font-size: 12px;
-  font-family: "OrbitronBold";
-  line-height: 24px;
-  padding: 10px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  background-color: $active;
+
+  a {
+    color: $text-accent;
+    font-size: 12px;
+    font-family: 'OrbitronBold';
+    line-height: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+   */
 }
 
 main {
