@@ -350,7 +350,6 @@ main {
 .hardskills .hardskills__showcase__case > summary span {
   margin-left: 1rem;
   font-size: 14px;
-  font-family: "OrbitronBold";
   font-family: "UbuntuBold";
 }
 .hardskills .hardskills__showcase__case > summary::-webkit-details-marker, .hardskills .hardskills__showcase__case > summary::marker {
