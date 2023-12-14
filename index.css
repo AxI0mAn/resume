@@ -273,7 +273,7 @@ header .heder__content .select_all {
   justify-content: center;
   align-content: center;
 }
-header .heder__content .select_multi_Ling:nth-child(2) {
+header .heder__content .select_multi_Ling:nth-child(1) {
   width: 100%;
   background-color: rgba(141, 200, 178, 0.8431372549);
 }
