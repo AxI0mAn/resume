@@ -85,9 +85,9 @@ const translateArr = {
     "ru": "использованные технологии",
   },
   "item-nam-1": {
-    "en": "now in work",
-    "ua": "зараз в роботі",
-    "ru": "сейчас в работе",
+    "en": "hairdressing salon",
+    "ua": "сайт перукарні",
+    "ru": "сайт парикмахерской",
   },
   "item-nam-2": {
     "en": "personal page",
