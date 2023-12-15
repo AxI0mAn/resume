@@ -55,7 +55,7 @@ const translateArr = {
     "ru": "страницa",
   },
   "view_code": {
-    "en": "view code",
+    "en": "code",
     "ua": "код",
     "ru": "код",
   },
