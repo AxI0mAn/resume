@@ -45,24 +45,24 @@ const translateArr = {
     "ru": "Некоторые мои работы:",
   },
   "go_to_site": {
-    "en": "go to site",
-    "ua": "подивитись сайт",
-    "ru": "посмотреть сайт",
+    "en": "site",
+    "ua": "сайт",
+    "ru": "сайт",
   },
   "go_page": {
-    "en": "go to page",
-    "ua": "дивитись сторинку",
-    "ru": "смотреть страницу",
+    "en": "page",
+    "ua": "сторинкa",
+    "ru": "страницa",
+  },
+  "view_code": {
+    "en": "view code",
+    "ua": "код",
+    "ru": "код",
   },
   "more_info": {
     "en": "more info",
     "ua": "детальніше",
     "ru": "подробнее",
-  },
-  "item-nam-1": {
-    "en": "now in work",
-    "ua": "Зараз в роботі",
-    "ru": "Сейчас в работе",
   },
   "adaptive_layout": {
     "en": "adaptive layout",
@@ -83,11 +83,6 @@ const translateArr = {
     "en": "technology stack",
     "ua": "використані технології",
     "ru": "использованные технологии",
-  },
-  "view_code": {
-    "en": "view code",
-    "ua": "подивитися код",
-    "ru": "посмотреть код",
   },
   "item-nam-1": {
     "en": "now in work",
